@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+  color: #212121;
+  line-height: 1.5;
+  
+}
+ul{
+  list-style-type:none;
+
+  padding: 0;
+}
+li{
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+ 
+  border: 1px solid #2e2f42;
+  margin-bottom:8px;
+  border-radius: 8px;
+
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+}
+
+h2{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+.item{
+  background-color: #f6f6fe;
+  border: 0;
+  padding: 16px;
+  width: 392px;
+  height: auto;
+  margin-bottom: 24px;
+}
+
+
+/* Task 2 */
+.gallery{
+
+  display: flex;
+  gap: 12px;
+}
+img{
+  width: 360px;
+  height: 300px;
+
+}
+.elem{
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* Task 3 */
+#name-input{
+  width: 360px;
+  height: 40px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  border: 1px solid #2e2f42;
+  border-radius: 6px;
+  background-color: transparent;
+}
+
+#name-input::placeholder{
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+ 
+
+}
+.title-anon{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  
+  line-height: 1.33333;
+  letter-spacing: 0.04em;
+  color: #2e2f42;}
+
+  /* Task 4 */
+
+.login-form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label{
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin-bottom: 8px;
+}
+input{
+  height: 40px;
+  width: 360px;
+  border: 1px solid #2e2f42;
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+button{
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 86px;
+  height: 40px;
+  background: #4e75ff;
+  border: none;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+/* Task 5 */
+.widget{
+  font-family: "Montserrat", sans-serif;
+  
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+.change-color{
+  width: 148px;
+}
+
+/* Task 6 */
+#controls{
+  display: flex;
+  gap: 16px;
+  border-color: #f6f6fe;
+  border-radius: 8px;
+  padding: 32px;
+ 
+  background-color: #f6f6fe;
+  margin-bottom: 16px;
+}
+.numbers{
+  border: 1px solid #808080;
+  border-radius: 8px;
+  padding: 8px 50px;
+  width: 150px;
+  height: 40px;
+}
+.create-btn{
+  width: 120px;
+  background-color: #4e75ff;
+}
+.destroy-btn{
+  width: 120px;
+  height: 40px;
+  background-color: #ff4e4e;
+}
+#boxes{
+  background-color: #f6f6fe;;
+  border-radius: 8px;
+  
+  flex-wrap: wrap;
+  display: flex;
+  gap: 16px;
+  padding: 32px;
+  flex-direction: row-reverse;
+}
