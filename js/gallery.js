@@ -66,18 +66,19 @@ const images = [
 
 const galleryImg = document.querySelector(".gallery");
 
-galleryImg.innerHTML = createMarkup(image);
+galleryImg.innerHTML = createMarkup(images);
 galleryImg.addEventListener("click", handleProductClick);
 
-
-function createMarkup(arr){
+function createMarkup(arr) {
   return arr
-    .map((items) =>`<li class="gallery-item">
+    .map(
+      (items) => `<li class="gallery-item">
           <a class="gallery-link" href="${items.preview}">
           <img class="gallery-image" src="${items.original}" data-source="${items.preview}" alt="${items.description}"/>
           </a>
         </li>`
-      ).join("");
+    )
+    .join("");
 }
 
 function handleProductClick(event) {
@@ -86,17 +87,28 @@ function handleProductClick(event) {
     return;
   }
 
-  const currentItem = event.target.closest(".gallery-item");
-  const imgSource = currentProduct.dataset.source;
-  const img = images.find((img) => img.preview === imgSource);
+  const currentItem = event.target.closest(".gallery-image");
+  const imgSource = currentItem.dataset.source;
+
+  
 
   const instance = basicLightbox.create(`
-  <div class="modal"><img src="${img.preview}" alt="${img.description}" width="1112" height="640"/></div>`);
+    <div class="modal">
+      <img src="${imgSource}" width="1112" height="640"/>
+    </div>`,
+    
+  );
 
-
+  
   instance.show();
-}
 
-
+  document.addEventListener("keydown", event => {
+    if (event.code === "Escape") {
+      instance.close();
+      document.removeEventListener('keydown', handleProductClick);
+      
+    }
+  })
+}  
 
 
